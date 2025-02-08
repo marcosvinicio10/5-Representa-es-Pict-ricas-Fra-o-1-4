@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;600&display=swap');
+
+body {
+    background: linear-gradient(180deg, rgba(10,10,10,1),  rgba(0,11,15,1));
+    color: white;
+    font-family: 'Rajdhani', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow-x: hidden;
+}
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(255, 255, 255, 0) 1px, transparent 1px), 
+                      linear-gradient(90deg, rgba(255, 255, 255, 0) 1px, transparent 1px);
+    background-size: 50px 50px;
+    z-index: -1;
+}
+body::after {
+    content: "";
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    width: 100%;
+    height: 300px;
+    background: radial-gradient(circle, rgba(1, 42, 90, 0.6) 10%, rgba(0, 0, 0, 1) 50%, transparent 80%);
+    transform: translateX(-50%);
+    z-index: -1;
+}
+h1{
+  font-size: 40px;
+}
+h3{
+  font-size: 20px;
+  color: gray;
+}
+header {
+    padding: 30px 20px;
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+.container-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+.inner-container {
+    background: rgba(0, 0, 0, 0.6);
+    width: 80%;
+    aspect-ratio: 1 / 1;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.inner-container:hover {
+    transform: scale(1.05);
+    box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.1), 0 0 20px rgba(1, 42, 245, 0.2);
+}
+h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: white;
+}
+@media (min-width: 768px) {
+    .container-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .container:nth-child(5) {
+        grid-column: span 2;
+        justify-self: center;
+        width: 50%;
+    }
+    header {
+        font-size: 3rem;
+    }
+}
+@media (max-width: 480px) {
+    header {
+        font-size: 1.5rem;
+    }
+}
+.rosa{
+  width: 300px;
+}
+@media (min-width: 768px) {
+  .rosa{
+    width: 550px;
+  }
+}
+.mosaico {
+            display: grid;
+            grid-template-columns: repeat(10, 1fr);
+            grid-template-rows: repeat(10, 1fr);
+            width: 300px;
+            height: 300px;
+            gap: 2px;
+        }
+        .quadrado {
+            width: 100%;
+            height: 100%;
+            background-color: #444;
+        }
+        .pintado {
+            background-color: #00ff00;
+        }
+}
+    .container2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 350px;
+        height: 350px;
+        background-color: #111;
+        border-radius: 10px;
+    }
+    .circle-container {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        border: 2px dashed white;
+        overflow: hidden;
+        scale: 0.9;
+    }
+    .quadrant {
+        position: absolute;
+        width: 50%;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 14px;
+        font-weight: bold;
+    }
+    .quadrant:nth-child(1) { 
+        background-color: #FF5733;
+        top: 0; left: 0; 
+    }
+    .sun {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-color: yellow;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 0 10px yellow;
+    }
+    .sun-point {
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        background-color: lime;
+        border-radius: 50%;
+        box-shadow: 0 0 6px lime;
+    }
+    .point1 { top: 50%; left: 10%; transform: translate(-50%, -50%); } /* Esquerda */
+    .point2 { top: 10%; left: 50%; transform: translate(-50%, -50%); } /* Topo */
+    .point3 { bottom: 10%; left: 50%; transform: translate(-50%, 50%); } /* Base */
+    .point4 { top: 50%; right: 10%; transform: translate(50%, -50%); } /* Direita */
+.container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.circle-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 2px dashed white;
+    overflow: hidden;
+}
+.sun {
+    width: 15%;
+    height: 15%;
+}
+@media (min-width: 768px) {
+  .mosaico{
+    width: 450px;
+    height: 450px;
+  }
+}
+.container-first {
+    background: rgba(5, 15, 20, 1);
+    border-radius: 40px;
+    padding: 20px;
+    width: 80%;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 5%;
+    backdrop-filter: blur(15px);
+    border: 2px solid rgba(0, 120, 155, 1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-bottom: 10%;
+}
+.container-first{
+  box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.1), 0 0 90px rgba(1, 92, 245, 1);
+}
+.container-two {
+    background: rgba(90, 7, 65, 0.5);
+    border-radius: 40px;
+    padding: 20px;
+    width: 80%;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 5%;
+    backdrop-filter: blur(15px);
+    border: 2px solid rgba(115, 2,175, 1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-bottom: 10%;
+}
+.container-poligono {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.poligono {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    clip-path: polygon(
+        50% 0%, 85% 15%, 100% 50%, 85% 85%, 
+        50% 100%, 15% 85%, 0% 50%, 15% 15%
+    ); 
+    background-color: white;
+}
+.triangulo {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    clip-path: polygon(50% 50%, 100% 0%, 100% 100%);
+    transform-origin: 50% 50%;
+}
+.triangulo:nth-child(1) { transform: rotate(0deg); }
+.triangulo:nth-child(2) { transform: rotate(90deg); }
+.triangulo:nth-child(3) { transform: rotate(180deg); }
+.triangulo:nth-child(4) { transform: rotate(270deg); }
+.destaque {
+    background-color: orange;
+}
+.container-poligono {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.poligono {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    clip-path: polygon(
+        50% 0%, 85% 15%, 100% 50%, 85% 85%, 
+        50% 100%, 15% 85%, 0% 50%, 15% 15%
+    ); 
+    background-color: white;
+}
+.triangulo {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, #bbb 30%, #777 100%);
+    background-color: rgba(255, 255, 255, 0.0);
+    clip-path: polygon(50% 50%, 100% 0%, 100% 100%);
+    clip-path: polygon(50% 50%, 100% 0%, 100% 100%);
+    transform-origin: 100% 100%;
+}
+.triangulo:nth-child(1) { transform: rotate(0deg); }
+.triangulo:nth-child(2) { transform: rotate(90deg); }
+.triangulo:nth-child(3) { transform: rotate(180deg); }
+.triangulo:nth-child(4) { transform: rotate(270deg); }
+
+.destaque {
+    background-color: orange;
+    z-index: 99999;
+}
+.poligono::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(#444 1px, transparent 1px);
+    background-size: 10px 10px;
+    opacity: 0.5;
+    z-index: 0; 
+}
+.poligono {
+    background: radial-gradient(circle, #bbb 30%, #777 100%);
+    border: 4px solid black;
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.5);
+}
+.poligono::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(#444 1px, transparent 1px);
+    background-size: 10px 10px;
+    opacity: 0.5;
+    z-index: -1;
+}
+.destaque {
+    background: linear-gradient(145deg, #ff8800, #cc5500);
+    z-index: 9999;
+}
